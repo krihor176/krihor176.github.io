@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAPHOLT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/t-tabicon.jpg">
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('fade-in');
+    
+            const sections = document.querySelectorAll('.scroll-fade-in');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 }); 
+    
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+    
+        });
+        
+      </script>
+
+</head>
+
+
+<body id="contact">
+
+    <header>
+        <div class="navbar">
+            <a href="index.html"> <img src="img/pravilogo.png" alt="Logo" class="logo"></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="offer.html">Offer</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="contactus.html">Contact us</a></li>
+            </ul>
+            
+        </div>
+</header>
+
+<form class="scroll-fade-in" id="contact-form" onsubmit="return validateForm()">
+    <div class="form-group scroll-fade-in">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    </div>
+    <div class="form-group scroll-fade-in">
+      <label for="surname">Surname:</label>
+      <input type="text" id="surname" name="surname" placeholder="Enter your surname" required>
+    </div>
+    <div class="form-group scroll-fade-in">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+    <div class="form-group scroll-fade-in">
+      <label for="country">Country:</label>
+      <input type="text" id="country" name="country" placeholder="Enter your country" required>
+    </div>
+    <div class="form-group scroll-fade-in" onsubmit="return validateForm()">
+        <label for="upload">*Upload Image:</label>
+        <input type="file" id="upload" name="upload" onchange="previewImage(event)">
+        <img id="preview" src="#" alt="Preview Image" style="display: none; max-width: 30%; height: 30%;">
+        <p id="filename" style="display: none;"></p>
+      </div>
+    <div class="form-group scroll-fade-in">
+      <label for="question">Question:</label>
+      <textarea id="question" name="question" placeholder="Enter your question or comment" required></textarea>
+    </div>
+    <button class="scroll-fade-in" type="submit">Submit</button>
+    <p class="scroll-fade-in" style="color: black; text-align: right; font-style: italic; margin-top: 5px;">* - not required</p>
+  </form>
+
+  <footer class="contact-footer">
+    <div class="footer-row-contact " >
+        <div class="footer-column footer-column-1">
+            <h3>OPENING HOURS</h3>
+            <p><br> Monday: Closed <br><br> Tuesday – Sunday: 10.00 – 17.00 <br><br> Wednesday: 10.00 – 21.00 </p>
+        </div>
+        <div class="footer-column footer-column-2">
+            <h3>FOLLOW US</h3> <br><br>
+            <a href="https://www.facebook.com/trapholt.dk/" target="_blank">
+                <img src="img/fb.png" alt="Facebook" class="social-media ">
+            </a>
+            <a href="https://www.instagram.com/trapholt/" target="_blank">
+                <img src="img/inst.png" alt="Facebook" class="social-media ">
+            </a>
+            <br>
+            <a href="https://www.tripadvisor.dk/Profile/Trapholt" target="_blank">
+                <img src="img/tripadvisor.png" alt="Facebook" class="social-media ">
+            </a>
+            <a href="https://www.linkedin.com/company/trapholt/" target="_blank">
+                <img src="img/linkedin.png" alt="Facebook" class="social-media ">
+            </a>
+        </div>
+        
+        <div class="footer-column footer-column-3">
+            <h3>INFORMATIONS</h3> <br><br>
+            <p>+45 76 30 05 30</p> <br>
+            <p>kunstmuseum@trapholt.dk</p> <br>
+            <p>Æblehaven 23 6000 Kolding</p> <br>
+        </div>
+    </div>
+    <p>&copy; 2023 Trapholt Museum. All rights reserved.</p>
+</footer>
+
+
+
+</body>
+</html>

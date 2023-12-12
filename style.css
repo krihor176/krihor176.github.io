@@ -1,0 +1,769 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #21221c;
+    color: rgb(255, 255, 255);
+}
+
+::selection {
+    color: black;
+    background: gold;
+  }
+
+header {
+    background-image: url('img/trapholtmuseum-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-size: 100% auto;
+    opacity: 0.9;
+    color: white;
+    padding: 3rem;
+    text-align: center;
+    height: 700px;
+}
+
+#about-us-page header {
+    background-image: url('img/aboutushero.webp');
+    height: 500px;
+}
+
+#nanna header {
+    background-image: url('img/nannahero2.webp');
+    height: 600px;
+}
+
+#contact header {
+    background-image: none;
+    background-color: #090a04;
+    height: 100px;
+    margin-bottom: 100px;
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 220px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.logo-nanna {
+    width: 320px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content h2 {
+    font-size: 50px;
+    margin-top: 100px;
+}
+
+.content p  {
+    margin: 20px auto;    
+    font-weight: 100;
+    line-height: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.blur-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(5px); 
+    z-index: -1;
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid gold;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+span {
+    background-color: gold;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+#nanna .navbar ul li a {
+    color: black;
+}
+
+.navbar ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: gold;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: gold; 
+}
+
+section {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #090a04;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 450px;
+}
+
+.footer-column {
+    flex-basis: 30%;
+    margin-bottom: 20px;
+}
+
+.footer-column-1 {
+    margin-top: -90px;
+}
+
+.footer-column-2 {
+    margin-top: -70px;
+}
+
+.footer-column-3 {
+    margin-top: -70px;
+}
+
+.footer-column h3 {
+    margin: 0;
+    font-size: 25px;
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-color: gold;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+.footer-column p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.social-media {
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.scroll-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.scroll-fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#history {
+    position: relative;
+  }
+  
+
+#history .history-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#history .history-text-container {
+    flex: 1;
+    padding-right: 20px;
+    margin-right: 50px;
+}
+
+#history .history-image-container {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.history-image {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid gold; 
+    padding: 2px;
+}
+
+#mission .mission-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    
+}
+
+#mission .mission-image-container {
+    grid-column: 1;
+}
+
+#mission .mission-text-container {
+    grid-column: 2;
+    margin-left: 50px;
+}
+
+#mission .mission-image {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid gold; 
+    padding: 2px;
+}
+
+
+#team {
+    height: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin-bottom: -300px;
+    margin-top: -300px;
+}
+
+
+#nanna {
+    color: black;
+    background-color: #fff;
+    margin-bottom: -400px;
+}
+
+#about-us-page {
+    color: #090a04;
+    background-color: #fff;
+}
+
+#about-us-page footer {
+    background-color: #090a04;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: -300px;
+}
+
+#nanna h1, #about-us-page h1, #offer-page h1 {
+    cursor: pointer;
+}
+
+#nanna h1::after, #about-us-page h1::after,  #offer-page h1::after {
+    content: '';
+    width: 0;
+    height: 5px;
+    background: gold;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+
+#nanna h1:hover::after, #about-us-page h1:hover::after, #offer-page h1:hover::after {
+    width: 100%;
+}
+
+#about-us-page .footer-column-1 {
+    margin-top: -420px;
+}
+
+#about-us-page .footer-column-2 {
+    margin-top: -400px;
+}
+
+#about-us-page .footer-column-3 {
+    margin-top: -400px;
+}
+
+#nanna .footer-column-1 {
+    margin-top: -370px;
+}
+
+#nanna .footer-column-2 {
+    margin-top: -350px;
+}
+
+#nanna .footer-column-3 {
+    margin-top: -350px;
+}
+
+
+.container {
+    max-width: 1200px;
+    width: 95%;
+}
+
+.slider-wrapper {
+    position: relative;
+}
+
+.slider-wrapper .slide-button {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-wrapper .slide-button:hover {
+    background: gold;
+}
+
+.slider-wrapper .slide-button#prev-slide {
+    left: -25px;  
+    display: none;
+}
+
+.slider-wrapper .slide-button#next-slide {
+    right: -25px;
+}
+
+.slider-wrapper .image-list {
+    display: grid;
+    gap: 18px;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 30px ;
+    overflow-x: auto;
+    scrollbar-width: none;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-wrapper .image-list .image-item {
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.container .slider-scrollbar {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.slider-scrollbar .scrollbar-track {
+    height: 2px;
+    width: 100%;
+    background: #ccc; 
+    position: relative;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+    height: 4px;
+}
+
+.slider-scrollbar .scrollbar-thumb {
+    position: absolute;
+    height: 100%;   
+    width: 50%;
+    background: gold; 
+    top: 0;
+    bottom: 0;
+    border-radius: inherit;
+    cursor: grab; 
+}
+
+.slider-scrollbar .scrollbar-track:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px; 
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+.image-item {
+    position: relative;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 10px; 
+    left: 10px; 
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+.image-text {
+    color: white; 
+    font-size: 14px; 
+    font-weight: bold;
+}
+
+#offer-page header {
+    background-image: url(https://trapholt.dk/wp-content/uploads/2021/11/11153-Trapholt-Collect-023.jpg);
+}
+
+#offer-page {
+    background-color: #bfbbb8;
+}
+
+.gold-list {
+    list-style-type: disc;
+    color: white;
+    margin-left: 20px;
+  }
+  
+  .gold-list:hover {
+    list-style-type: disc;
+    color: gold;
+    margin-left: 20px;
+  }
+
+  .gold-list li {
+    margin-bottom: 10px;
+  }
+
+  #offer .offer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#offer .offer-text-container {
+    flex: 1;
+    padding-right: 20px;
+    margin-right: 50px;
+}
+
+#offer .offer-image-container {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.offer-image {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid gold; 
+    padding: 2px;
+}
+
+.footer-row-offer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.footer-row-aboutus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 300px;
+}
+
+.footer-row-exhibitions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 300px;
+}
+
+.footer-row-nanna {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 300px;
+}
+
+.copy-aboutus {
+    margin-top: -50px;
+}
+
+.copy-nanna {
+    margin-top: none;
+}
+
+
+#nanna .nanna-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    margin-bottom: 400px;
+}
+
+#nanna .nanna-image-container {
+    grid-column: 1;
+}
+
+#nanna .nanna-text-container {
+    grid-column: 2;
+    margin-left: 50px;
+    
+}
+
+#nanna .nanna-image {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid gold; 
+    padding: 2px;
+}
+
+#contact {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+#contact-form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    margin-bottom: 100px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    color: #090a04;
+    margin-bottom: 15px;
+}
+  
+  input[type="text"],
+  input[type="email"]
+   {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #090a04;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #090a04;
+    border-radius: 5px;
+  }
+
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: gold;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: gold;
+    color: #090a04;
+    border: 2px solid #090a04;
+  }
+
+  label[for="upload"] {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  label[for="upload"]:hover {
+    color: gold; 
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+  
+  .custom-file-upload {
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+  
+  .custom-file-upload:hover {
+    background-color: #e6e6e6;
+  }
+
+  #filename {
+    color: black;
+  }
+
+.contact-footer {
+    background-color: #090a04;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer-row-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 100px
+}
+
+.footer-column-contact {
+    flex-basis: 30%;
+    margin-bottom: 20px;
+}
