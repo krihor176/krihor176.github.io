@@ -8,31 +8,7 @@
     <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="img/t-tabicon.jpg">
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('fade-in');
-    
-            const sections = document.querySelectorAll('.scroll-fade-in');
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 }); 
-    
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-    
-        });
-        
-      </script>
-
+    <link rel="icon" href="img/tabicon.jpg">
 </head>
 
 
