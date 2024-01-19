@@ -816,4 +816,12 @@ a:visited {
       .footer-column-3 {
         margin-top: 20px;
       }
+
+      header {
+        height: 200px;
+      }
+
+      button {
+        width: 150px;
+        }
 }
