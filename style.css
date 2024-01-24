@@ -326,6 +326,19 @@ a:visited {
     padding: 2px;
 }
 
+.offer-image {
+    width: 100%;
+    height: auto;
+    border: 5px solid gold; 
+    padding: 2px;
+}
+
+#offer .offer-text-container {
+    flex: 1;
+    padding-right: 20px;
+    margin-right: 50px;
+}
+
 #mission .mission-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -580,7 +593,6 @@ a:visited {
   }
 
   #offer .offer-container {
-    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -595,13 +607,6 @@ a:visited {
 #offer .offer-image-container {
     flex: 1;
     padding-left: 20px;
-}
-
-.offer-image {
-    max-width: 100%;
-    height: auto;
-    border: 5px solid gold; 
-    padding: 2px;
 }
 
 .footer-row-offer {
@@ -794,6 +799,12 @@ a:visited {
     }
 }
 
+@media (min-width:500px) {
+    .offer-container {
+        display: flex;
+    } 
+}
+
 @media (max-width:500px) {
     img.logo {
         margin-top: -50px;
@@ -880,8 +891,14 @@ a:visited {
         width: 300px;
     }
 
-    .history-image {
-        max-width: 500px;
-        
+    .offer-container {
+        display: block;
+    }
+
+    .offer-image {
+        display: block; 
+        margin-top: 30px;
+        margin-left: -15px;
+        height: 300px;
     }
 }
