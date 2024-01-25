@@ -302,7 +302,6 @@ a:visited {
   
 
 #history .history-container {
-    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -340,7 +339,6 @@ a:visited {
 }
 
 #mission .mission-container {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
     align-items: center;
@@ -655,7 +653,6 @@ a:visited {
 
 
 #nanna .nanna-container {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
     align-items: center;
@@ -804,6 +801,23 @@ a:visited {
         display: flex;
     } 
 }
+@media (min-width:500px) {
+    .history-container {
+        display: flex;
+    } 
+}
+@media (min-width:500px) {
+    .mission-container {
+        display: grid;
+    } 
+}
+
+@media (min-width:500px) {
+    .nanna-container {
+        display: grid;
+    } 
+}
+
 
 @media (max-width:500px) {
     img.logo {
@@ -858,11 +872,11 @@ a:visited {
         display: none;
         }
 
-  .navbar-toggle {
+    .navbar-toggle {
         display: block;
         }
 
-  .navbar-menu.show {
+    .navbar-menu.show {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -900,5 +914,78 @@ a:visited {
         margin-top: 30px;
         margin-left: -15px;
         height: 300px;
+    }
+
+    #about-us-page header {
+        height: 200px;
+    }
+
+    #about-us-page h1 {
+        width: 300px;
+    }
+
+    .history-container {
+        display: block;
+    }
+
+    .history-image {
+        display: block; 
+        margin-top: 30px;
+        margin-left: -15px;
+        height: 200px;
+        width: 90%;
+    }
+
+    .mission-image {
+        float: right;
+        height: 200px;
+        margin-bottom: 20px;
+        width: 90%;
+    }
+
+    #about-us-page .footer-column-1 {
+        margin-top: -420px;
+    }
+    
+    #about-us-page .footer-column-2 {
+        margin-top: -120px;
+    }
+    
+    #about-us-page .footer-column-3 {
+        margin-top: 0px;
+    }
+
+    #contact-form {
+        margin-top: -50px;
+    }
+    
+    input[type="text"], input[type="email"] {  
+        width: 60%;
+    }
+
+    textarea {
+        width: 80%;
+    }
+
+    #nanna header {
+        height: 300px;
+    }
+
+    #nanna .nanna-image {
+        width: 90%;
+        float: right;
+        margin-bottom: 20px;
+    }
+
+    .nanna-img {
+        height: auto;
+    }
+
+    #nanna .footer-column-2 {
+        margin-top: -100px;
+    }
+    
+    #nanna .footer-column-3 {
+        margin-top: 0px;
     }
 }
