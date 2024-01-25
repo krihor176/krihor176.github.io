@@ -796,30 +796,30 @@ a:visited {
     }
 }
 
-@media (min-width:500px) {
+@media (min-width:681px) {
     .offer-container {
         display: flex;
     } 
 }
-@media (min-width:500px) {
+@media (min-width:681px) {
     .history-container {
         display: flex;
     } 
 }
-@media (min-width:500px) {
+@media (min-width:681px) {
     .mission-container {
         display: grid;
     } 
 }
 
-@media (min-width:500px) {
+@media (min-width:681px) {
     .nanna-container {
         display: grid;
     } 
 }
 
 
-@media (max-width:500px) {
+@media (max-width:680px) {
     img.logo {
         margin-top: -50px;
         float: left;
@@ -901,6 +901,18 @@ a:visited {
         color: gold;
     }
 
+    #nanna .navbar ul li a:hover::after {
+        color: black;
+    }
+
+    #nanna .navbar ul li a:hover::after {
+        width: 0%;
+    } 
+    
+    #nanna .navbar ul li a:hover {
+        color: gold;
+    }
+
     #offer-page h1 {
         width: 300px;
     }
@@ -956,7 +968,7 @@ a:visited {
     }
 
     #contact-form {
-        margin-top: -50px;
+        margin-top: -80px;
     }
     
     input[type="text"], input[type="email"] {  
@@ -984,8 +996,128 @@ a:visited {
     #nanna .footer-column-2 {
         margin-top: -100px;
     }
-    
+
     #nanna .footer-column-3 {
         margin-top: 0px;
+    }
+
+    
+}
+
+@media(min-width: 681px)and (max-width:1000px) {
+    header {
+        height: 310px;
+    }
+
+    .navbar ul li a:hover::after {
+        width: 0%;
+    } 
+    
+    .navbar ul li a:hover {
+        color: gold;
+    }
+
+    .navbar {
+        margin-left: 25px;
+    }
+
+    .content h1 {
+        font-size: 50px;
+        margin-top: -50px;
+    }
+
+    .content h2 {
+        font-size: 30px;
+        margin-top: -50px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .content p {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    .footer-row {
+        margin-top: 500px;
+    }
+
+    .footer-column-2 {
+        margin-top: -111px;
+    }
+
+    .footer-column-3 {
+        margin-top: -111px;
+    }
+
+    #about-us-page header {
+        height: 280px;
+    }
+
+    #contact-form {
+        margin-top: -80px;
+    }
+    
+    input[type="text"], input[type="email"] {  
+        width: 60%;
+    }
+
+    textarea {
+        width: 80%;
+    }
+
+    #nanna header {
+        height: 400px;
+    }
+
+    #nanna .navbar ul li a:hover::after {
+        color: black;
+    }
+
+    #nanna .navbar ul li a:hover::after {
+        width: 0%;
+    } 
+    
+    #nanna .navbar ul li a:hover {
+        color: gold;
+    }
+}
+
+@media(min-width: 1001px) and (max-width:1500px) {
+    header {
+        height: 450px;
+    }
+
+    .content h1 {
+        font-size: 50px;
+        margin-top: 150px;
+    }
+
+    .content h2 {
+        font-size: 30px;
+        margin-top: -100px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .content p {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    #contact-form {
+        margin-top: -80px;
+    }
+    
+    input[type="text"], input[type="email"] {  
+        width: 60%;
+    }
+
+    textarea {
+        width: 80%;
+    }
+
+    #about-us-page header {
+        height: 400px;
     }
 }
